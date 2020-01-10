@@ -1,3 +1,21 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!
+  new_hash = {}
+  data[:gender][:female].map do |name|
+    new_hash[name] = {:color => [], :gender =>[], :lives => []}
+  end
+  data[:gender][:male].map do |name|
+    new_hash[name] = {:color => [], :gender =>[], :lives => []}
+  end
+  new_hash.each_key do |name|
+    data.each_key do |key1|
+  	  data[key1].each_key do |key2|
+  	    array_color = []
+  	    if data[key1][key2].include?(name) == true
+  	      new_hash[name][key1].unshift(key2[0, key2.size])
+  	    end
+  	  end
+  	end
+  end
+  puts new_hash
+  return new_hash
 end
