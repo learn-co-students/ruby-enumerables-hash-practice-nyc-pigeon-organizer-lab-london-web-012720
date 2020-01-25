@@ -8,8 +8,8 @@ pigeon_list = {}
       end
     end
   end
-
-  x = pigeon_list.keys
+# sets up the new hash, with new keys
+  x = pigeon_list.keys # make a list names
 
     data[:color].each do |color, name|
       name.each do |b_name|
@@ -20,7 +20,7 @@ pigeon_list = {}
         end
       end
     end
-
+# inserts color into color key
     data[:gender].each do |type, name|
       name.each do |b_name|
         x.each do |i|
@@ -31,6 +31,7 @@ pigeon_list = {}
         end
       end
     end
+    # inserts gender into gender key
 
   data[:lives].each do |location, name|
       name.each do |b_name|
@@ -41,5 +42,7 @@ pigeon_list = {}
         end
       end
     end
+    # inserts location into lives key
+
 return pigeon_list
 end
