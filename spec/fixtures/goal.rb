@@ -1,4 +1,4 @@
-{
+pigeon_list = {
   "Theo" => {
     :color => ["purple", "grey"],
     :gender => ["male"],
